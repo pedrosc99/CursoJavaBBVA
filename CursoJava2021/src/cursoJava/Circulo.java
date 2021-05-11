@@ -56,6 +56,12 @@ public class Circulo extends Figura {
 		sb.append(radio);
 		return sb.toString();
 	}
+	public float getRadio() {
+		return radio;
+	}
+	public void setRadio(float radio) {
+		this.radio = radio;
+	}
 	
 	
 	
