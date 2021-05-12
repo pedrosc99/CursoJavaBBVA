@@ -57,10 +57,9 @@ public class Cuadrado extends Figura {
 	}
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(super.toString());
-		sb.append("radio=");
-		return sb.toString();
+		return "Cuadrado [lado=" + lado + "]";
 	}
+	
 	
 	
 
