@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Figuras</title>
+<script type="text/javascript">
+
+	function cargar() {
+		var figurasTipo = new Array(1, 2, 3, 4, 5);
+		var selectFiguras = document.getElementById("figuras");
+		var opcionVacia = document.createElement("option");
+		opcionVacia.text = "";
+		opcionVacia.value = "";
+		selectFiguras.appendChild(opcionVacia);
+		for(indice in figurasTipo) {
+			var optionS = document.createElement("option");
+			optionS.value = figurasTipo[indice];
+			
+			switch (figurasTipo[indice]) {
+				case 1: optionS.text = "Cuadrado";
+					  	break;
+				case 2: optionS.text = "Círculo";
+					  	break;
+				case 3: optionS.text = "Rectángulo";
+					  	break;
+				case 4: optionS.text = "Triángulo";
+					  	break;
+				case 5: optionS.text = "Poligono";
+					  	break;
+			}
+			selectFiguras.appendChild(optionS);
+		}
+	}
+	
+	
+	
+	function cambiarC() {
+		var opcion = document.getElementById("figuras").value;
+		switch(opcion) {
+			case "1": 
+				document.getElementById("nombre").style.display = "table-row";
+				document.getElementById("tipo").style.display = "table-row";
+				document.getElementById("lado").style.display = "table-row";
+				document.getElementById("radio").style.display = "none";
+				document.getElementById("base").style.display = "none";
+				document.getElementById("altura").style.display = "none";
+				document.getElementById("apotema").style.display = "none";
+				document.getElementById("numLados").style.display = "none";
+				break;
+			case "2": 
+				document.getElementById("nombre").style.display = "table-row";
+				document.getElementById("tipo").style.display = "table-row";
+				document.getElementById("lado").style.display = "none";
+				document.getElementById("radio").style.display = "table-row";
+				document.getElementById("base").style.display = "none";
+				document.getElementById("altura").style.display = "none";
+				document.getElementById("apotema").style.display = "none";
+				document.getElementById("numLados").style.display = "none";
+				break;
+			case "3":
+				document.getElementById("nombre").style.display = "table-row";
+				document.getElementById("tipo").style.display = "table-row";
+				document.getElementById("lado").style.display = "none";
+				document.getElementById("radio").style.display = "none";
+				document.getElementById("base").style.display = "table-row";
+				document.getElementById("altura").style.display = "table-row";
+				document.getElementById("apotema").style.display = "none";
+				document.getElementById("numLados").style.display = "none";
+				break; 
+			case "4": 
+				document.getElementById("nombre").style.display = "table-row";
+				document.getElementById("tipo").style.display = "table-row";
+				document.getElementById("lado").style.display = "none";
+				document.getElementById("radio").style.display = "none";
+				document.getElementById("base").style.display = "table-row";
+				document.getElementById("altura").style.display = "table-row";
+				document.getElementById("apotema").style.display = "none";
+				document.getElementById("numLados").style.display = "none";
+				break;
+			case "5": 
+				document.getElementById("nombre").style.display = "table-row";
+				document.getElementById("tipo").style.display = "table-row";
+				document.getElementById("lado").style.display = "table-row";
+				document.getElementById("radio").style.display = "none";
+				document.getElementById("base").style.display = "none";
+				document.getElementById("altura").style.display = "none";
+				document.getElementById("apotema").style.display = "table-row";
+				document.getElementById("numLados").style.display = "table-row";
+				break;
+			default:
+				document.getElementById("nombre").style.display = "none";
+				document.getElementById("tipo").style.display = "none";
+				document.getElementById("lado").style.display = "none";
+				document.getElementById("radio").style.display = "none";
+				document.getElementById("base").style.display = "none";
+				document.getElementById("altura").style.display = "none";
+				document.getElementById("apotema").style.display = "none";
+				document.getElementById("numLados").style.display = "none";
+				break;
+		}
+	}
+	
+
+</script>
+</head>
+<body onload="cargar(); cambiarC()">
+
+<div class="container">
+<br />
+  <h2>FIGURAS</h2>
+  <br/>
+  <select name="figuras" id="figuras" onchange="cambiarC()" ></select>
+  <input type="button" onclick=" " id="Enviar" style="float:right;" value="Enviar"/>
+  <br/>  
+  <br />        
+  <table class="table" id="tabla">
+    <thead>
+      <tr>
+        <th>Campos</th>
+        <th>Datos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="nombre">
+        <td>Nombre</td>
+        <td><input type="text" id="nombre" name="nombre" /></td>
+      </tr>
+      <tr id="tipo">
+      </tr>
+      <tr id="lado">
+        <td>Lado</td>
+        <td><input type="text" id="lado" name="lado" /></td>
+      </tr>
+      <tr id="radio">
+        <td>Radio</td>
+        <td><input type="text" id="radio" name="radio" /></td>
+      </tr>
+      <tr id="base">
+        <td>Base</td>
+        <td><input type="text" id="base" name="base" /></td>
+      </tr>
+      <tr id="altura">
+        <td>Altura</td>
+        <td><input type="text" id="altura" name="altura" /></td>
+      </tr>
+      <tr id="apotema">
+        <td>Apotema</td>
+        <td><input type="text" id="apotema" name="apotema" /></td>
+      </tr>
+      <tr id="numLados">
+        <td>Número de lados</td>
+        <td><input type="text" id="numLados" name="numLados" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
